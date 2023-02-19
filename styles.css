@@ -5,8 +5,12 @@
 .calculator-body {
     background-color: lightgray;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
     width: 200px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
     flex-direction: column;
 }
 
@@ -14,7 +18,16 @@ h1 {
     font-family: 'Courier New', Courier, monospace; 
 }
 
-.first-row, .second-row, .third-row, .header {
-   
+.display {
+    background-color: white;
+    width: 170px;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin: 5px;
+    height: 35px;
+    width: 35px;
     
 }
