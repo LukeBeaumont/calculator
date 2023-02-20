@@ -23,24 +23,42 @@ h1 {
     color: red;
 }
 
-.row {
+
+
+.top-display {
+   
     display: flex;
-    gap: 12px;
-    align-items: first baseline;
-    
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
     
 }
-.display {
-    background-color: white;
-    width: 125px;
-    padding: 2px;
-    margin-bottom: 10px;
-    margin-left: 6px;
-    justify-content: right;
+
+.screen {
     display: flex;
-    border: black 1px solid;
-    border-radius: 5px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: white;
+     border: black 1px solid;
+     border-radius: 5px;
+     height: 40px;
+     width: 130px;
     
+}
+
+.previous {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: small;
+    margin-right: 2px;
+
+}
+
+.current {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: large;
+    margin-right: 2px;
+
 }
 
 .buttons {
