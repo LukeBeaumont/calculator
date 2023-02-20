@@ -16,13 +16,29 @@
 
 h1 {
     font-family: 'Courier New', Courier, monospace; 
+    margin-top: 5px;
 }
 
+#clear {
+    color: red;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: first baseline;
+    
+    
+}
 .display {
     background-color: white;
-    width: 170px;
+    width: 125px;
     padding: 2px;
     margin-bottom: 10px;
+    margin-left: 6px;
+    justify-content: right;
+    display: flex;
+    
 }
 
 .buttons {
