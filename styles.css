@@ -38,6 +38,8 @@ h1 {
     margin-left: 6px;
     justify-content: right;
     display: flex;
+    border: black 1px solid;
+    border-radius: 5px;
     
 }
 
@@ -46,4 +48,8 @@ h1 {
     height: 35px;
     width: 35px;
     
+}
+
+.buttons:hover {
+    background-color: aquamarine;
 }
