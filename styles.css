@@ -1,6 +1,7 @@
 .main-container{
     display: flex;
     justify-content: center;
+    padding-top: 100px;
 }
 .calculator-body {
     background-color: lightgray;
@@ -21,17 +22,17 @@ h1 {
 
 #clear {
     color: red;
+    
+}
+#clear:hover {
+   background-color: lightcoral;
 }
 
-
-
 .top-display {
-   
-    display: flex;
+   display: flex;
     gap: 10px;
     margin-left: 10px;
     margin-right: 5px;
-    
 }
 
 .screen {
@@ -40,34 +41,43 @@ h1 {
     align-items: flex-end;
     flex-direction: column;
     background-color: white;
-     border: black 1px solid;
-     border-radius: 5px;
-     height: 40px;
-     width: 130px;
-    
+    border: black 1px solid;
+    border-radius: 5px;
+    height: 40px;
+    width: 130px;
 }
 
 .previous {
     font-family: 'Courier New', Courier, monospace; 
     font-size: small;
+    font-weight: bold;
     margin-right: 2px;
-
 }
 
 .current {
     font-family: 'Courier New', Courier, monospace; 
     font-size: large;
+    font-weight: bold;
     margin-right: 2px;
-
 }
 
-.buttons {
+.number {
     margin: 5px;
     height: 35px;
     width: 35px;
-    
+}
+.operator {
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+    color: green;
+
 }
 
-.buttons:hover {
-    background-color: aquamarine;
+.number:hover {
+    background-color: lightskyblue;
+}
+
+.operator:hover {
+    background-color: lightgreen;
 }
