@@ -20,11 +20,14 @@ h1 {
     margin-top: 5px;
 }
 
-#clear {
+.clear {
     color: red;
+    margin: 5px;
+    height: 35px;
+    width: 35px;
     
 }
-#clear:hover {
+.clear:hover {
    background-color: lightcoral;
 }
 
@@ -71,7 +74,6 @@ h1 {
     height: 35px;
     width: 35px;
     color: green;
-
 }
 
 .number:hover {
@@ -80,4 +82,9 @@ h1 {
 
 .operator:hover {
     background-color: lightgreen;
+}
+.equals {
+    margin: 5px;
+    height: 35px;
+    width: 35px;
 }
