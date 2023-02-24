@@ -14,7 +14,7 @@ const operators = document.querySelectorAll(".operator");
 
 clear.addEventListener("click", clearCalc);
 
-equals.addEventListener("click", calculate(currentValue,previousValue));
+equals.addEventListener("click", calculate);
 
 numbers.forEach((num)=> num.addEventListener("click", (e)=> handleNumber(e.target.textContent)));
 
@@ -37,14 +37,24 @@ function handleNumber(num) {
 
 function handleOperator(op) {
     currentOperator = op;
-    previousValue = currentValue + " " + currentOperator;
-    previousDisplay.textContent = previousValue;
+    previousValue = currentValue;
+    previousDisplay.textContent = previousValue + " " + currentOperator;
     currentDisplay.textContent = "";
     currentValue = "";
+    
 }
 
-function calculate(firstNumber,secondNumber) {
-    if(currentOperator === "+") {
-        currentDisplay.textContent = firstNumber + secondNumber;
-    }
+function calculate() {
+    currentValue = Number(currentValue);
+    previousValue = Number(previousValue); 
+
+   if(currentOperator === "+") {
+        previousValue = currentValue += previousValue;
+    } else if (currentOperator === "-") {
+        previousValue = previousValue -= currentValue;
+    } else if (currentOperator === "x"){
+        previousValue = currentValue *= previousValue;
+    } else previousValue = previousValue /= currentValue;
+
+    currentDisplay.textContent = previousValue;
 }
