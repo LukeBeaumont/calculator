@@ -24,7 +24,7 @@ function clearCalc() {
     currentValue = "";
     previousValue = "";
     currentOperator = "";
-    currentDisplay.textContent = "";
+    currentDisplay.textContent = "0";
     previousDisplay.textContent = "";
 }
 
@@ -57,4 +57,5 @@ function calculate() {
     } else previousValue = previousValue /= currentValue;
 
     currentDisplay.textContent = previousValue;
+    previousDisplay.textContent = "";
 }
