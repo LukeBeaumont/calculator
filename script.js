@@ -61,3 +61,7 @@ function calculate() {
     currentDisplay.textContent = previousValue;
     previousDisplay.textContent = "";
 }}
+
+function roundNum(num) {
+    return Math.round(num * 10000) / 10000;
+}
