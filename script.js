@@ -36,26 +36,28 @@ function handleNumber(num) {
 }
 
 function handleOperator(op) {
-    currentOperator = op;
-    previousValue = currentValue;
-    previousDisplay.textContent = previousValue + " " + currentOperator;
-    currentDisplay.textContent = "";
-    currentValue = "";
+    if ( currentValue != "") {
+        currentOperator = op;
+        previousValue = currentValue;
+        previousDisplay.textContent = previousValue + " " + currentOperator;
+        currentDisplay.textContent = "";
+        currentValue = "";
     
-}
+}}
 
 function calculate() {
-    currentValue = Number(currentValue);
-    previousValue = Number(previousValue); 
+    if(currentValue != "") {
+        currentValue = Number(currentValue);
+        previousValue = Number(previousValue); 
 
-   if(currentOperator === "+") {
+     if(currentOperator === "+") {
         previousValue = currentValue += previousValue;
-    } else if (currentOperator === "-") {
+        } else if (currentOperator === "-") {
         previousValue = previousValue -= currentValue;
-    } else if (currentOperator === "x"){
+        } else if (currentOperator === "x"){
         previousValue = currentValue *= previousValue;
-    } else previousValue = previousValue /= currentValue;
+        } else previousValue = previousValue /= currentValue;
 
     currentDisplay.textContent = previousValue;
     previousDisplay.textContent = "";
-}
+}}
