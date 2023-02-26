@@ -6,7 +6,7 @@ const currentDisplay = document.querySelector(".current");
 const previousDisplay = document.querySelector(".previous");
 
 const clear = document.querySelector(".clear");
-const decimal = document.querySelector("#decimal");
+const decimal = document.querySelector(".decimal");
 const equals = document.querySelector(".equals");
 
 let numbers = document.querySelectorAll(".number");
@@ -15,6 +15,8 @@ const operators = document.querySelectorAll(".operator");
 clear.addEventListener("click", clearCalc);
 
 equals.addEventListener("click", calculate);
+
+decimal.addEventListener("click", handleDecimal)
 
 numbers.forEach((num)=> num.addEventListener("click", (e)=> handleNumber(e.target.textContent)));
 
@@ -64,4 +66,11 @@ function calculate() {
 
 function roundNum(num) {
     return Math.round(num * 10000) / 10000;
+}
+
+function handleDecimal () {
+    if (!currentValue.includes(".")) {
+        currentValue += ".";
+    }
+    currentDisplay.textContent = currentValue;
 }

@@ -78,6 +78,12 @@ h1 {
     color: green;
 }
 
+.decimal {
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+}
+
 .number:hover {
     background-color: lightskyblue;
 }
