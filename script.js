@@ -38,14 +38,17 @@ function handleNumber(num) {
 }
 
 function handleOperator(op) {
-    if ( currentValue != "") {
+    if(currentValue != "" && previousValue != ""){
+        calculate();
+        currentValue = "";
+    } else if ( currentValue != "" ) {
         currentOperator = op;
         previousValue = currentValue;
         previousDisplay.textContent = previousValue + " " + currentOperator;
         currentDisplay.textContent = "";
         currentValue = "";
-    
-}}
+    }
+}
 
 function calculate() {
     if(currentValue != "") {
@@ -60,9 +63,10 @@ function calculate() {
         previousValue = currentValue *= previousValue;
         } else previousValue = previousValue /= currentValue;
 
-    currentDisplay.textContent = previousValue;
-    previousDisplay.textContent = "";
-}}
+      currentDisplay.textContent = previousValue;
+      previousDisplay.textContent = "";
+    }
+}
 
 function roundNum(num) {
     return Math.round(num * 10000) / 10000;
