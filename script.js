@@ -41,6 +41,7 @@ function handleOperator(op) {
     if(currentValue != "" && previousValue != ""){
         calculate();
         currentValue = "";
+         currentOperator = op;
     } else if ( currentValue != "" ) {
         currentOperator = op;
         previousValue = currentValue;
@@ -65,7 +66,9 @@ function calculate() {
 
       currentDisplay.textContent = previousValue;
       previousDisplay.textContent = "";
+      currentValue = "";
     }
+    console.log (currentValue, previousValue)
 }
 
 function roundNum(num) {
