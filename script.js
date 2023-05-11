@@ -38,16 +38,19 @@ function handleNumber(num) {
 }
 
 function handleOperator(op) {
-    if(currentValue != "" && previousValue != ""){
+    if(currentValue != "" && previousValue != ""){ 
+        
+        
         calculate();
-        currentValue = "";
-         currentOperator = op;
+        currentOperator = op;
+       
     } else if ( currentValue != "" ) {
         currentOperator = op;
-        previousValue = currentValue;
+        previousValue = currentValue; 
+        currentValue = "";
+
         previousDisplay.textContent = previousValue + " " + currentOperator;
         currentDisplay.textContent = "";
-        currentValue = "";
     }
 }
 
@@ -64,11 +67,14 @@ function calculate() {
         previousValue = currentValue *= previousValue;
         } else previousValue = previousValue /= currentValue;
 
+
       currentDisplay.textContent = previousValue;
       previousDisplay.textContent = "";
+
       currentValue = "";
+      
     }
-    console.log (currentValue, previousValue)
+    console.log (currentValue, previousValue, currentOperator)
 }
 
 function roundNum(num) {
