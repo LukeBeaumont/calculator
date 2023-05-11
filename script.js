@@ -64,7 +64,7 @@ function calculate() {
         previousValue = currentValue *= previousValue;
         } else previousValue = previousValue /= currentValue;
 
-      currentDisplay.textContent = previousValue += ` ${currentOperator}`;
+      currentDisplay.textContent = previousValue;
       previousDisplay.textContent = "";
       currentValue = "";
     }
