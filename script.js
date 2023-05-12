@@ -35,7 +35,7 @@ function handleNumber(num) {
         currentValue += num;
     }
     currentDisplay.textContent = currentValue;
-    console.log (currentValue, previousValue, currentOperator);
+    console.log (previousValue, currentOperator, currentValue);
 }
 
 function handleOperator(op) {
@@ -45,7 +45,7 @@ function handleOperator(op) {
         calculate();
        
        
-    } else if ( currentValue != "") {
+    } else if ( currentValue != "" || previousValue != "") {
         currentOperator = op;
         previousValue = currentValue; 
         currentValue = "";
@@ -53,7 +53,7 @@ function handleOperator(op) {
         previousDisplay.textContent = previousValue + " " + currentOperator;
         currentDisplay.textContent = "";
     }
-    console.log (currentValue, previousValue, currentOperator)
+    console.log (previousValue, currentOperator, currentValue);
 }
 
 function calculate() {
@@ -78,7 +78,7 @@ function calculate() {
       currentOperator = "";
       
     }
-    console.log (currentValue, previousValue, currentOperator)
+    console.log (previousValue, currentOperator, currentValue);
 }
 
 function roundNum(num) {
