@@ -41,7 +41,7 @@ function handleNumber(num) {
 function handleOperator(op) {
     if(currentValue != "" && previousValue != ""){ 
         
-        
+        currentOperator = op;
         calculate();
        
        
@@ -53,6 +53,7 @@ function handleOperator(op) {
         previousDisplay.textContent = previousValue + " " + currentOperator;
         currentDisplay.textContent = "";
     }
+    console.log (currentValue, previousValue, currentOperator)
 }
 
 function calculate() {
@@ -61,18 +62,19 @@ function calculate() {
         previousValue = Number(previousValue); 
 
      if(currentOperator === "+") {
-        previousValue = currentValue += previousValue;
+        previousValue += currentValue;
         } else if (currentOperator === "-") {
-        previousValue = previousValue -= currentValue;
+        previousValue -= currentValue;
         } else if (currentOperator === "x"){
-        previousValue = currentValue *= previousValue;
-        } else previousValue = previousValue /= currentValue;
-
+        previousValue *= currentValue;
+        } else if (currentOperator === "/") {
+            previousValue /= currentValue;
+        }
 
       currentDisplay.textContent = previousValue;
       previousDisplay.textContent = "";
 
-      
+      currentValue = "";
       currentOperator = "";
       
     }
