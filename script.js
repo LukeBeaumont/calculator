@@ -40,20 +40,19 @@ function handleNumber(num) {
 
 function handleOperator(op) {
    
-       
-if ( currentValue != "" || previousValue != "") {
         currentOperator = op;
         previousValue = currentValue; 
         currentValue = "";
 
         previousDisplay.textContent = previousValue + " " + currentOperator;
         currentDisplay.textContent = "";
-    }
-    console.log (previousValue, currentOperator, currentValue);
+        
+        console.log (previousValue, currentOperator, currentValue);
 }
+    
 
 function calculate() {
-    
+
         currentValue = Number(currentValue);
         previousValue = Number(previousValue); 
 
@@ -72,10 +71,11 @@ function calculate() {
 
       currentValue = "";
       currentOperator = "";
-      
+
+      console.log (previousValue, currentOperator, currentValue);
+
     }
-    console.log (previousValue, currentOperator, currentValue);
-}
+    
 
 function roundNum(num) {
     return Math.round(num * 10000) / 10000;
