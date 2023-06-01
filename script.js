@@ -39,13 +39,9 @@ function handleNumber(num) {
 }
 
 function handleOperator(op) {
-    if(currentValue != "" && previousValue != ""){ 
-        
-        currentOperator = op;
-        calculate();
+   
        
-       
-    } else if ( currentValue != "" || previousValue != "") {
+if ( currentValue != "" || previousValue != "") {
         currentOperator = op;
         previousValue = currentValue; 
         currentValue = "";
