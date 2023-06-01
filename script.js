@@ -53,7 +53,7 @@ if ( currentValue != "" || previousValue != "") {
 }
 
 function calculate() {
-    if(currentValue != "" && previousValue != "") {
+    
         currentValue = Number(currentValue);
         previousValue = Number(previousValue); 
 
