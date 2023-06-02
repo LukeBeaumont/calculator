@@ -1,101 +1,100 @@
 body {
-    background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
-.main-container{
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
+.main-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
 }
 .calculator-body {
-    background-color: lightgray;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 200px;
-    height: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    flex-direction: column;
+  background-color: lightgray;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
 }
 
 h1 {
-    font-family: 'Courier New', Courier, monospace; 
-    margin-top: 5px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 5px;
 }
 
 .clear {
-    color: red;
-    margin: 5px;
-    height: 35px;
-    width: 35px;
-    
+  color: red;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
 }
 .clear:hover {
-   background-color: lightcoral;
+  background-color: lightcoral;
 }
 
 .top-display {
-   display: flex;
-    gap: 10px;
-    margin-left: 10px;
-    margin-right: 5px;
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .screen {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    background-color: white;
-    border: black 1px solid;
-    border-radius: 5px;
-    height: 40px;
-    width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: white;
+  border: black 1px solid;
+  border-radius: 5px;
+  height: 40px;
+  width: 130px;
 }
 
 .previous {
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: small;
-    font-weight: bold;
-    margin-right: 2px;
-    height: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+  font-weight: bold;
+  margin-right: 2px;
+  height: 15px;
 }
 
 .current {
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: large;
-    font-weight: bold;
-    margin-right: 2px;
-    height: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+  font-weight: bold;
+  margin-right: 2px;
+  height: 15px;
 }
 
 .number {
-    margin: 5px;
-    height: 35px;
-    width: 35px;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
 }
 .operator {
-    margin: 5px;
-    height: 35px;
-    width: 35px;
-    color: green;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
+  color: green;
 }
 
 .decimal {
-    margin: 5px;
-    height: 35px;
-    width: 35px;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
 }
 
 .number:hover {
-    background-color: lightskyblue;
+  background-color: lightskyblue;
 }
 
 .operator:hover {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 .equals {
-    margin: 5px;
-    height: 35px;
-    width: 35px;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
 }

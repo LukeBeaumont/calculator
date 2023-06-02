@@ -16,74 +16,73 @@ clear.addEventListener("click", clearCalc);
 
 equals.addEventListener("click", calculate);
 
-decimal.addEventListener("click", handleDecimal)
+decimal.addEventListener("click", handleDecimal);
 
-numbers.forEach((num)=> num.addEventListener("click", (e)=> handleNumber(e.target.textContent)));
+numbers.forEach((num) =>
+  num.addEventListener("click", (e) => handleNumber(e.target.textContent))
+);
 
-operators.forEach((op) => op.addEventListener("click", (e)=> handleOperator(e.target.textContent)))
- 
+operators.forEach((op) =>
+  op.addEventListener("click", (e) => handleOperator(e.target.textContent))
+);
+
 function clearCalc() {
-    currentValue = "";
-    previousValue = "";
-    currentOperator = "";
-    currentDisplay.textContent = "0";
-    previousDisplay.textContent = "";
+  currentValue = "";
+  previousValue = "";
+  currentOperator = "";
+  currentDisplay.textContent = currentValue;
+  previousDisplay.textContent = currentValue;
 }
 
 function handleNumber(num) {
-    if(currentValue.length <= 9) {
-        currentValue += num;
-    }
-    currentDisplay.textContent = currentValue;
-    console.log (previousValue, currentOperator, currentValue);
+  if (currentValue.length <= 9) {
+    currentValue += num;
+  }
+  currentDisplay.textContent = currentValue;
+  console.log(previousValue, currentOperator, currentValue);
 }
 
 function handleOperator(op) {
-   
-        currentOperator = op;
-        previousValue = currentValue; 
-        currentValue = "";
+  currentOperator = op;
+  previousValue = currentValue;
+  currentValue = "";
 
-        previousDisplay.textContent = previousValue + " " + currentOperator;
-        currentDisplay.textContent = "";
-        
-        console.log (previousValue, currentOperator, currentValue);
+  previousDisplay.textContent = previousValue + " " + currentOperator;
+  currentDisplay.textContent = "";
+
+  console.log(previousValue, currentOperator, currentValue);
 }
-    
 
 function calculate() {
+  currentValue = Number(currentValue);
+  previousValue = Number(previousValue);
 
-        currentValue = Number(currentValue);
-        previousValue = Number(previousValue); 
+  if (currentOperator === "+") {
+    previousValue += currentValue;
+  } else if (currentOperator === "-") {
+    previousValue -= currentValue;
+  } else if (currentOperator === "x") {
+    previousValue *= currentValue;
+  } else if (currentOperator === "/") {
+    previousValue /= currentValue;
+  }
 
-     if(currentOperator === "+") {
-        previousValue += currentValue;
-        } else if (currentOperator === "-") {
-        previousValue -= currentValue;
-        } else if (currentOperator === "x"){
-        previousValue *= currentValue;
-        } else if (currentOperator === "/") {
-            previousValue /= currentValue;
-        }
+  currentDisplay.textContent = previousValue;
+  previousDisplay.textContent = "";
 
-      currentDisplay.textContent = previousValue;
-      previousDisplay.textContent = "";
+  currentValue = "";
+  currentOperator = "";
 
-      currentValue = "";
-      currentOperator = "";
-
-      console.log (previousValue, currentOperator, currentValue);
-
-    }
-    
-
-function roundNum(num) {
-    return Math.round(num * 10000) / 10000;
+  console.log(previousValue, currentOperator, currentValue);
 }
 
-function handleDecimal () {
-    if (!currentValue.includes(".")) {
-        currentValue += ".";
-    }
-    currentDisplay.textContent = currentValue;
+function roundNum(num) {
+  return Math.round(num * 10000) / 10000;
+}
+
+function handleDecimal() {
+  if (!currentValue.includes(".")) {
+    currentValue += ".";
+  }
+  currentDisplay.textContent = currentValue;
 }
