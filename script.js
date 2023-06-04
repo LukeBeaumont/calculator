@@ -55,7 +55,7 @@ function calculate() {
   previousValue = Number(previousValue);
 
   if (currentOperator === "+") {
-    previousValue += currentValue;
+    currentValue += previousValue;
   } else if (currentOperator === "-") {
     previousValue -= currentValue;
   } else if (currentOperator === "x") {
