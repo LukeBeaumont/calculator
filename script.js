@@ -59,11 +59,11 @@ function calculate() {
   } else if (currentOperator === "-") {
     previousValue -= currentValue;
   } else if (currentOperator === "x") {
-    previousValue *= currentValue;
+    currentValue *= previousValue;
   } else if (currentOperator === "/") {
     previousValue /= currentValue;
   }
-
+  currentDisplay.textContent = previousValue;
   console.log(previousValue, currentOperator, currentValue);
 }
 
