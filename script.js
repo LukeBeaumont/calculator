@@ -58,10 +58,12 @@ function calculate() {
     currentValue += previousValue;
   } else if (currentOperator === "-") {
     previousValue -= currentValue;
+    currentValue = previousValue;
   } else if (currentOperator === "x") {
     currentValue *= previousValue;
   } else if (currentOperator === "/") {
     previousValue /= currentValue;
+    currentValue = previousValue;
   }
   currentDisplay.textContent = previousValue;
   console.log(previousValue, currentOperator, currentValue);
