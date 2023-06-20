@@ -65,7 +65,7 @@ function calculate() {
     previousValue /= currentValue;
     currentValue = previousValue;
   }
-  currentDisplay.textContent = previousValue;
+  currentDisplay.textContent = currentValue;
   console.log(previousValue, currentOperator, currentValue);
 }
 
