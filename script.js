@@ -47,6 +47,7 @@ function handleOperator(op) {
   previousValue = currentValue;
   currentValue = "";
 
+  currentDisplay.textContent = `${previousValue}` + `${currentOperator}`;
   console.log(previousValue, currentOperator, currentValue);
 }
 
