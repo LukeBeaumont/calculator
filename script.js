@@ -26,7 +26,7 @@ operators.forEach((op) =>
   op.addEventListener("click", (e) => handleOperator(e.target.textContent))
 );
 
-function clearCalc() {
+  function clearCalc() {
   currentValue = "";
   previousValue = "";
   currentOperator = "";
